@@ -36,10 +36,12 @@ class App {
   }
 
   public void setAdd(String s) {
+      add.reset();
       add.add(s);
   }
 
   public void setSub(String s) {
+      sub.reset();
       sub.add(s);
   }
 
