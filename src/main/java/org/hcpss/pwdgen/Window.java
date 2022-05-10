@@ -1,25 +1,23 @@
 package org.hcpss.pwdgen;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JButton;
-import javax.swing.JTextArea;
-import javax.swing.JCheckBox;
-import javax.swing.JSpinner;
-import javax.swing.SpinnerNumberModel;
-import javax.swing.JScrollPane;
-import javax.swing.event.ChangeListener;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.CaretListener;
-import javax.swing.event.CaretEvent;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ComponentListener;
-import java.awt.event.HierarchyEvent;
-import java.awt.event.HierarchyListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JSpinner;
+import javax.swing.JTextArea;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.event.CaretEvent;
+import javax.swing.event.CaretListener;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 public class Window extends JFrame{
     
@@ -53,7 +51,7 @@ public class Window extends JFrame{
   private final JCheckBox CHECK_NUMS = new JCheckBox();
   private final JCheckBox CHECK_SPECIALS = new JCheckBox();
 
-  private final GridLayout LAYOUT = new GridLayout(9, 2);
+  private final GridLayout LAYOUT = new GridLayout(8, 2);
 
   private final App APP;
 
