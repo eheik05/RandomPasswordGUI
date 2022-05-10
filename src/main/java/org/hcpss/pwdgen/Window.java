@@ -23,13 +23,13 @@ import java.awt.event.ItemListener;
 
 public class Window extends JFrame{
     
-  private final JLabel LABEL_CHARS = new JLabel("Characters");
-  private final JLabel LABEL_NUMS = new JLabel("Numbers");
-  private final JLabel LABEL_SPECIAL = new JLabel("Special");
-  private final JLabel LABEL_SUB = new JLabel("Remove");
-  private final JLabel LABEL_ADD = new JLabel("Add");
-  private final JLabel LABEL_LEN = new JLabel("Length");
-  private final JLabel LABEL_DICT = new JLabel("Dictionary");
+  private final JLabel LABEL_CHARS = new JLabel("Characters", JLabel.CENTER);
+  private final JLabel LABEL_NUMS = new JLabel("Numbers", JLabel.CENTER);
+  private final JLabel LABEL_SPECIAL = new JLabel("Special", JLabel.CENTER);
+  private final JLabel LABEL_SUB = new JLabel("Remove", JLabel.CENTER);
+  private final JLabel LABEL_ADD = new JLabel("Add", JLabel.CENTER);
+  private final JLabel LABEL_LEN = new JLabel("Length", JLabel.CENTER);
+  private final JLabel LABEL_DICT = new JLabel("Dictionary", JLabel.CENTER);
 
   private final JButton BUTTON_PASS = new JButton("Password");
 

@@ -61,6 +61,7 @@ class App {
 
   private void updateDict() {
       dict.reset();
+      dict.add(add.getTokens());
       if (doChars) {
           dict.add(CHARS.getTokens());
       }
