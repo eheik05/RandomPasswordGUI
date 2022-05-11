@@ -14,15 +14,13 @@ class App {
   private boolean doNums = false;
   private boolean doSpecials = false;
   private String password = "";
-
-  private final Window WINDOW;
   
   public static void main(String[] args) {
     new App();
   }
 
   public App() {
-    WINDOW = new Window(this);
+    new Window(this);
   }
 
   public void setDoChars(boolean bool) {
