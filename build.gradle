@@ -5,11 +5,9 @@
  * Learn more about Gradle by exploring our samples at https://docs.gradle.org/7.3/samples
  */
 
- plugins {
-     id('application')
- }
-
- 
+plugins {
+   id 'application'
+}
 
 application {
     mainClass = 'org.hcpss.pwdgen.App'
@@ -21,4 +19,12 @@ jar {
       'Main-Class': 'org.hcpss.pwdgen.App'
     )
   }
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs "src/main/resources", "src/main/java"
+        }
+    }
 }

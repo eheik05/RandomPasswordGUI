@@ -1,12 +1,13 @@
 package org.hcpss.pwdgen;
 
 import java.util.LinkedHashSet;
+import java.io.Serializable;
 import java.security.SecureRandom;
 
-public final class Dictionary {
+public final class Dictionary implements Serializable {
   private LinkedHashSet<Character> tokens = new LinkedHashSet<>();
 
-  private SecureRandom rand = new SecureRandom();
+  private transient SecureRandom rand = new SecureRandom();
 
   public Dictionary(String tokens) {
     this.tokens = stringToSet(tokens);
