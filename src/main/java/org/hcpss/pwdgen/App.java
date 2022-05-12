@@ -1,13 +1,5 @@
 package org.hcpss.pwdgen;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-
 class App {
 
   private final Dictionary CHARS = new Dictionary("qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM");
@@ -22,22 +14,12 @@ class App {
   private boolean doNums = false;
   private boolean doSpecials = false;
   private String password = "";
-  private File dictSave;
   
   public static void main(String[] args) {
     new App();
   }
 
   public App() {
-    try {
-      dictSave = new File(this.getClass().getResource("/dict.dat").toURI());
-      FileInputStream fis = new FileInputStream(dictSave);
-      ObjectInputStream ois = new ObjectInputStream(fis);
-      add = (Dictionary) ois.readObject();
-      ois.close();
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
     new Window(this);
   }
 
@@ -90,14 +72,6 @@ class App {
           dict.add(SPECIALS.getTokens());
       }
       dict.sub(sub.getTokens());
-      try {
-        FileOutputStream fos = new FileOutputStream(dictSave);
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
-        oos.writeObject(dict);
-        oos.close();
-      } catch (Exception e) {
-        e.printStackTrace();
-      }
   }
 
   private void genPass() {
